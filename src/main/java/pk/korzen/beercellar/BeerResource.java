@@ -32,8 +32,12 @@ public class BeerResource {
 	@Path("create")
 	@Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
 	public Response createBeer(Beer beer) {
-		dao.addBeer(beer);
-		return Response.ok().build();
+		int count = dao.addBeer(beer);
+		if(count == 0) {
+			return Response.status(Response.Status.BAD_REQUEST).build();
+		} else {
+			return Response.ok().build();
+		}
 	}
 
 	@PUT

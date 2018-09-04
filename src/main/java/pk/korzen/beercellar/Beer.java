@@ -29,9 +29,9 @@ public class Beer {
 	@Column(name="buying_date", nullable=false)
 	private LocalDate buyingDate;
 	@Column(name="quantity_bought", nullable=false)
-	private int quantityBought;
+	private Integer quantityBought;
 	@Column(name="quantity_available", nullable=false)
-	private int quantityAvailable;
+	private Integer quantityAvailable;
 	@Column(name="drinking_date")
 	private LocalDate drinkingDate;
 	@Enumerated(EnumType.STRING)
@@ -81,16 +81,16 @@ public class Beer {
 	public void setBuyingDate(LocalDate buyingDate) {
 		this.buyingDate = buyingDate;
 	}
-	public int getQuantityBought() {
+	public Integer getQuantityBought() {
 		return quantityBought;
 	}
-	public void setQuantityBought(int quantityBought) {
+	public void setQuantityBought(Integer quantityBought) {
 		this.quantityBought = quantityBought;
 	}
-	public int getQuantityAvailable() {
+	public Integer getQuantityAvailable() {
 		return quantityAvailable;
 	}
-	public void setQuantityAvailable(int quantityAvailable) {
+	public void setQuantityAvailable(Integer quantityAvailable) {
 		this.quantityAvailable = quantityAvailable;
 	}
 	public LocalDate getDrinkingDate() {
